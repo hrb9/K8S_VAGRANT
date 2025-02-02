@@ -55,5 +55,3 @@ sudo apt-mark hold kubelet kubeadm kubectl
 sudo apt purge --auto-remove apparmor
 
 echo "[INFO] Done installing Kubernetes components."
-
-
