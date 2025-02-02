@@ -81,12 +81,11 @@ K8S_VAGRANT/
 
     ```bash
     # (On your host machine, not inside the VM)
-    scp vagrant@<k8s-master-1 IP>:/home/vagrant/.kube/config ~/.kube/config-k8s-vagrant
+    scp vagrant@192.168.56.100:/home/vagrant/.kube/config ~/.kube/config-k8s-vagrant
     export KUBECONFIG=~/.kube/config-k8s-vagrant
-    kubectl get nodes
+    kubectl get nodes --insecure-skip-tls-verify=true
     ```
-
-    Replace `<k8s-master-1 IP>` with the IP address of `k8s-master-1` (e.g., `192.168.56.101`).
+    **Note**: We are connecting through the Load Balancer on `192.168.56.100`
 
 ### Notes
 
