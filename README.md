@@ -34,7 +34,7 @@ K8S_VAGRANT/
 1.  **Clone the repository:**
 
     ```bash
-    git clone <URL of this repository>
+    git clone https://github.com/hrb9/K8S_VAGRANT.git
     cd K8S_VAGRANT
     ```
 
