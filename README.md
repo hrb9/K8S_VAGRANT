@@ -9,6 +9,7 @@ This project allows you to easily set up a Kubernetes environment using Vagrant.
   * OpenEBS installed for storage management
 
 ### Project Structure
+ ```bash
 K8S_VAGRANT/
 ├── 01_install_k8s.sh
 ├── 02_configure_lb.sh
@@ -19,7 +20,7 @@ K8S_VAGRANT/
 ├── 07_configure_hosts.sh
 ├── README.md
 └── Vagrantfile
-
+   ```
 
 ### Prerequisites
 
