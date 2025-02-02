@@ -7,7 +7,7 @@ echo "[INFO] Installing Kubernetes prerequisites..."
 
 echo "[INFO] apt-get update ..."
 sudo apt-get update -y
-sudo apt purge --auto-remove apparmor
+sudo apt purge --auto-remove apparmor -y 
 echo "[INFO] Installing base packages (force-confdef/confold)..."
 sudo apt-get install -y \
   --option Dpkg::Options::="--force-confdef" \
@@ -55,3 +55,5 @@ sudo apt-mark hold kubelet kubeadm kubectl
 sudo apt purge --auto-remove apparmor
 
 echo "[INFO] Done installing Kubernetes components."
+
+
