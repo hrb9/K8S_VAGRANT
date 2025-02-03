@@ -65,7 +65,7 @@ K8S_VAGRANT/
 4.  **Connect to the Master Node:**
 
     ```bash
-    vagrant ssh master
+    vagrant ssh master1
     ```
 
 5.  **Check the cluster status:**
