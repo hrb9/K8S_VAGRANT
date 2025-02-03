@@ -74,7 +74,7 @@ K8S_VAGRANT/
     ```
 6.  **Install OpenEBS (Mayastor ready)**
      Copy the 06_install_openebs.sh script to the master node and run it. 
-    ``bash
+    ```bash
      nano 06_install_openebs.sh
      (Copy the script to the master) 
      chmod +x 06_install_openebs.sh
