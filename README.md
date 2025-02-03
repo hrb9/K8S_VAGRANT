@@ -76,7 +76,7 @@ K8S_VAGRANT/
      Copy the 06_install_openebs.sh script to the master node and run it. 
     ``bash
      nano 06_install_openebs.sh
-     # Copy the script to the master 
+     (Copy the script to the master) 
      chmod +x 06_install_openebs.sh
      ./06_install_openebs.sh
      ```
