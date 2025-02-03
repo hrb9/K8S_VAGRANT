@@ -1,12 +1,12 @@
 ## K8S_VAGRANT
 
-This project allows you to easily set up a Kubernetes environment using Vagrant. The environment includes:
+This project allows you to easily set up a HA Kubernetes environment using Vagrant. The environment includes:
 
   * Load Balancer (LB)
   * Kubernetes Master (Control Plane)
   * Worker Nodes
   * Configured NVMe SSDs for storage
-  * OpenEBS installed for storage management
+  * OpenEBS installed for storage management (Post installed on the Master node)
 
 ### Project Structure
  ```bash
@@ -74,6 +74,17 @@ K8S_VAGRANT/
     kubectl get nodes
     kubectl get pods -A
     ```
+6.  **Install OpenEBS (Mayastor ready)**
+     Copy the 06_install_openebs.sh script to the master node and run it. 
+     ``bash
+     nano 06_install_openebs.sh
+     # Copy the script to the master 
+     chmod +x 06_install_openebs.sh
+     ./06_install_openebs.sh
+     ```
+7. **Contuinue with the rest of the step:** 
+https://github.com/Matanmoshes/deploy-k8s-with-openebs-metallb-istio
+
 
 ### Notes
 
