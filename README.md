@@ -26,8 +26,6 @@ K8S_VAGRANT/
 
   * **Vagrant**: Version 2.2.19 or higher. ([https://www.vagrantup.com/downloads](https://www.vagrantup.com/downloads))
   * **VirtualBox**: Version 6.1 or higher. ([https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads))
-  * **kubectl**: Command-line tool for managing Kubernetes. ([https://kubernetes.io/docs/tasks/tools/install-kubectl/](https://kubernetes.io/docs/tasks/tools/install-kubectl/))
-  * **helm**: Package manager for Kubernetes. ([https://helm.sh/docs/intro/install/](https://helm.sh/docs/intro/install/))
 
 ### Getting Started
 
