@@ -65,7 +65,7 @@ K8S_VAGRANT/
 4.  **Connect to the Master Node:**
 
     ```bash
-    vagrant ssh k8s-master-1
+    vagrant ssh master
     ```
 
 5.  **Check the cluster status:**
@@ -74,18 +74,6 @@ K8S_VAGRANT/
     kubectl get nodes
     kubectl get pods -A
     ```
-
-6.  **Accessing the cluster from outside Vagrant:**
-
-    The `admin.conf` file needed to access the cluster is automatically copied to the `/home/vagrant/.kube/config` directory inside the `k8s-master-1` virtual machine. You can copy it to your host machine and use it with `kubectl`:
-
-    ```bash
-    # (On your host machine, not inside the VM)
-    scp vagrant@192.168.56.100:/home/vagrant/.kube/config ~/.kube/config-k8s-vagrant
-    export KUBECONFIG=~/.kube/config-k8s-vagrant
-    kubectl get nodes --insecure-skip-tls-verify=true
-    ```
-    **Note**: We are connecting through the Load Balancer on `192.168.56.100`
 
 ### Notes
 
