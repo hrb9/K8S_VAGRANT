@@ -41,7 +41,7 @@ Vagrant.configure("2") do |config|
     m.vm.hostname = "k8s-master-1"
     m.vm.network "private_network", ip: "192.168.56.101"
     m.vm.network:forwarded_port, guest: 6444, host: 6444
-
+    m.vm.network:forwarded_port, guest: 3000, host: 3000
     # Provisioning
     m.vm.provision "shell", path: "provision/07_configure_hosts.sh"
     m.vm.provision "shell", path: "provision/01_install_k8s.sh"

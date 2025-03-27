@@ -80,9 +80,40 @@ K8S_VAGRANT/
      chmod +x 06_install_openebs.sh
      ./06_install_openebs.sh
      ```
-7. **Contuinue with the rest of the step:** 
-https://github.com/Matanmoshes/deploy-k8s-with-openebs-metallb-istio
+7. **Install Helm and Set Up Prometheus Monitoring:** 
 
+   a. Install Helm 3:
+   ```bash
+   curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+   chmod 700 get_helm.sh
+   ./get_helm.sh
+   ```
+
+   b. Add and update the Prometheus Helm repository:
+   ```bash
+   helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+   helm repo update
+   ```
+
+   c. Access Grafana dashboard (run this command and then access via browser):
+   ```bash
+   kubectl port-forward svc/prometheus-stack-grafana 3000:80 -n monitoring --address 0.0.0.0
+   ```
+
+   d. Open Grafana in your browser:
+   ```
+   http://localhost:3000/
+   ```
+
+   e. Login credentials:
+   - Username: admin
+   - Password: prom-operator
+
+   For additional advanced configuration, refer to:
+   https://github.com/Matanmoshes/deploy-k8s-with-openebs-metallb-istio
+
+8. **Continue with the rest of the steps:** 
+https://github.com/Matanmoshes/deploy-k8s-with-openebs-metallb-istio
 
 ### Notes
 
